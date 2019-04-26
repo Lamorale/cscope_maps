@@ -44,7 +44,9 @@ if has("cscope")
         set cscopeverbose
     " else add the database pointed to by environment variable 
     elseif $CSCOPE_DB != ""
+        set nocscopeverbose
         cs add $CSCOPE_DB
+        set cscopeverbose
     endif
 
     " show msg when any other cscope db added
